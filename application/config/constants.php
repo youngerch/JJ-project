@@ -83,3 +83,67 @@ defined('EXIT_USER_INPUT')     OR define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+
+/*
+|--------------------------------------------------------------------------
+| Site Custom Define
+|--------------------------------------------------------------------------
+*/
+define("__DEV_IP__",        "125.131.205.42");  //개발지 아이피
+
+// define("__DEFAULT_HOST__",  "http://dcmall-admin.sambosarang.com");
+// define("__WWW_DOMAIN__",    "http://dcmall.sambosarang.com");
+
+define('__SITE_TITLE__',    "관리자");
+
+define("__TABLE_PREFIX__", "tbl_"); //database table prefix
+define('__DATA_DIR__', '/data');
+define('__DATA_PATH__', $_SERVER['DOCUMENT_ROOT'].'/data');
+
+function getRealClientIp()
+{
+    $ipaddress = '';
+    if (getenv('HTTP_CLIENT_IP')) {
+
+        $ipaddress = getenv('HTTP_CLIENT_IP');
+
+    } else if(getenv('HTTP_X_FORWARDED_FOR')) {
+
+        $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
+
+    } else if(getenv('HTTP_X_FORWARDED')) {
+
+        $ipaddress = getenv('HTTP_X_FORWARDED');
+
+    } else if(getenv('HTTP_FORWARDED_FOR')) {
+
+        $ipaddress = getenv('HTTP_FORWARDED_FOR');
+
+    } else if(getenv('HTTP_FORWARDED')) {
+
+        $ipaddress = getenv('HTTP_FORWARDED');
+
+    } else if(getenv('REMOTE_ADDR')) {
+
+        $ipaddress = getenv('REMOTE_ADDR');
+
+    } else {
+        $ipaddress = '알수없음';
+    }
+
+    return $ipaddress;
+}
+define('__REMOTE_ADDR__', getRealClientIp());
+
+//날짜 및 시간
+define('__TIME_YMD__',      date('Y-m-d', time()));
+define('__TIME_HIS__',      date('H:i:s', time()));
+define('__TIME_HI__',       date('H:i', time()));
+define('__TIME_YMDHI__',    date('Y-m-d H:i', time()));
+define('__TIME_YMDHIS__',   date('Y-m-d H:i:s', time()));
+//define('__WITHDRAW_YMD__',      date('Y-m-d', strtotime("-365 days")));
+
+//로그인 관련
+define("__DEFAULT_LOGIN_FAIL_CNT__", 5);    //비밀번호 오류 횟수
+
+define("__DEFAULT_LANG_CD__", "LANGKOR");
