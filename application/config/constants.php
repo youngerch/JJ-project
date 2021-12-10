@@ -92,8 +92,8 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 // define("__DEV_IP__",        "125.131.205.42");  //개발지 아이피
 define("__DEV_IP__",        "127.0.0.1");  //개발지 아이피
 
-define("__DEFAULT_HOST__",  "http://admin.jjproject.com");
-define("__WWW_DOMAIN__",    "http://jjproject.com");
+// define("__DEFAULT_HOST__",  "http://admin.jjproject.com");
+// define("__WWW_DOMAIN__",    "http://jjproject.com");
 
 define('__SITE_TITLE__',    "관리자");
 

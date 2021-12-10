@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://admin.jjproject.com/';
+// $config['base_url'] = 'http://admin.jjproject.com/';
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -401,7 +401,7 @@ $config['sess_regenerate_destroy'] = true;
 |
 */
 $config['cookie_prefix']	= '';
-$config['cookie_domain']	= '.jjproject.com';
+// $config['cookie_domain']	= '.jjproject.com';
 $config['cookie_path']		= '/';
 $config['cookie_secure']	= FALSE;
 $config['cookie_httponly'] 	= FALSE;
