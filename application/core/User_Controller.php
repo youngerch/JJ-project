@@ -38,7 +38,7 @@ class User_Controller extends MY_Controller
         // //허용된 아이피 이외는 모두 차단~
         // $allow_ip =  $this->config->item('cfg_allow_ip');
         // if(!in_array(__REMOTE_ADDR__, $allow_ip)):
-        //     redirect("http://dcmall.sambosarang.com/", 'refresh');
+        //     redirect("http://admin.jjproject.com/", 'refresh');
         //     exit;
         // endif;
 
